@@ -9,7 +9,7 @@
 		"tslint": "tslint --format codeFrame --project .",
 		"tsfix": "tslint --project . --fix",
 		"start": "npm run watch",
-		"watch": "concurrently -k -p \"[{name}]\" -n \"tsc,srv\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch:tsc\" \"npm run watch:server\"",
+		"watch": "concurrently -k -p \"[{name}]\" -n \"type,http,bosh\" -c \"cyan.bold,green.bold,yellow.bold\" \"npm run watch:tsc\" \"npm run watch:server\"",
 		"watch:tsc": "tsc --project . --watch",
 		"watch:server": "nodemon --no-update-notifier dist/main.js",
 		"watch:test": "jest --watchAll --collectCoverage=true --coverageReporters=json"
@@ -29,9 +29,11 @@
 		"eslint-config-xo": "^0.20.1",
 		"eslint-plugin-unicorn": "^4.0.2",
 		"express": "^4.16.3",
+		"express-basic-auth": "^1.1.4",
 		"fixjson": "^1.1.0",
 		"jest": "^22.4.2",
 		"jsonlint": "^1.6.3",
+		"node-fetch": "^2.1.2",
 		"nodemon": "^1.17.2",
 		"nunjucks": "^3.1.2",
 		"redux": "^3.7.2",
@@ -42,13 +44,15 @@
 		"tslint-consistent-codestyle": "^1.12.1",
 		"tslint-microsoft-contrib": "^5.0.3",
 		"tslint-xo": "^0.6.0",
-		"typescript": "^2.8.0-dev.20180318"
+		"typescript": "^2.8.0-dev.20180318",
+		"vis": "^4.21.0"
 	},
 	"engines": {
 		"node": "8.9.x",
 		"npm": ">=5.x.x"
 	},
 	"devDependencies": {
+		"@types/node-fetch": "^1.6.8",
 		"tslint-immutable": "^4.5.2"
 	}
 }

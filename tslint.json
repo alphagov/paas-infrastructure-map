@@ -95,7 +95,6 @@
 		],
 		"no-inner-html": true,
 		"no-octal-literal": true,
-		"no-reserved-keywords": true,
 		"non-literal-require": true,
 		"possible-timing-attack": true,
 		"react-anchor-blank-noopener": true,
