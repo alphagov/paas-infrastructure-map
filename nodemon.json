@@ -1,0 +1,9 @@
+{
+	"watch": [
+		"dist"
+	],
+	"ext": "js",
+	"ignore": [],
+	"spawn": true,
+	"exec": "node -r source-map-support/register --inspect -r trace -r clarify ./dist/main.js"
+}
